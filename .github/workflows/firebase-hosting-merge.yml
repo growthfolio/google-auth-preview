@@ -11,7 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm ci && npm run build
+
+      # Instala o Node.js e o Firebase CLI
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      # Instala as dependências e realiza o build
+      - name: Install dependencies and build
+        run: npm ci && npm run build
+
+      # Deploy para o Firebase Hosting
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
