@@ -1,46 +1,65 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Google OAuth Dashboard
 
-## Available Scripts
+Este é um projeto simples de front-end React que utiliza o Google OAuth 2.0 para autenticação. O objetivo é fornecer um ambiente para realização de testes com tokens do Google.
 
-In the project directory, you can run:
+## Funcionalidades
+- Login via Google OAuth 2.0.
+- Exibição do token JWT gerado pelo Google.
+- Opção de copiar o token para a área de transferência.
 
-### `npm start`
+## Tecnologias Utilizadas
+- React + TypeScript
+- Tailwind CSS
+- Firebase Hosting (para o deploy)
+- Biblioteca @react-oauth/google
+- Phosphor Icons
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### **Importante**
+Este projeto tem como objetivo fornecer uma interface simples para testes e manipulação de tokens OAuth 2.0 gerados pelo Google. **Não armazena nenhum dado sensível em cache ou banco de dados.** Toda a manipulação ocorre no navegador do usuário, garantindo a segurança das informações durante os testes.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Como Configurar o Projeto
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/felipemacedo1/google-auth-preview.git
+   cd google-auth-preview
+   ```
 
-### `npm test`
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Crie um arquivo `.env` na raiz do projeto e adicione sua chave do Google:
+   ```
+   REACT_APP_GOOGLE_CLIENT_ID=<sua_google_client_id>
+   ```
 
-### `npm run build`
+4. Inicie o projeto localmente:
+   ```bash
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Como Contribuir
+1. Faça um fork do repositório.
+2. Crie uma branch para sua feature:
+   ```bash
+   git checkout -b minha-feature
+   ```
+3. Envie suas alterações:
+   ```bash
+   git add .
+   git commit -m "Descrição das alterações"
+   git push origin minha-feature
+   ```
+4. Abra um Pull Request no GitHub.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deploy
+Este projeto está hospedado no Firebase Hosting. Para deploy, basta rodar:
+```bash
+npm run build
+firebase deploy
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Licença
+Este projeto está sob a licença MIT.
